@@ -16,17 +16,18 @@ function timeLeft(endtime){
 function showClock(clockNumber) {
 
   // 隐藏所有的时钟
-  // var clocks = document.getElementsByClassName("clock-pane");
-  // for (var i = 0; i < clocks.length; i++) {
-  //   clocks[i].classList.remove("active");
-  // };
-  document.getElementById('clock-pane1').style.display = 'none';
-  document.getElementById('clock-pane2').style.display = 'none';
-  document.getElementById('clock-pane3').style.display = 'none';
+  var clocks = document.getElementsByClassName("clock-pane");
+  for (var i = 0; i < clocks.length; i++) {
+    clocks[i].classList.remove("active");
+  };
+  // document.getElementById('clock-pane1').style.display = 'none';
+  // document.getElementById('clock-pane2').style.display = 'none';
+  // document.getElementById('clock-pane3').style.display = 'none';
 
   // 显示选定的时钟
   var clock = document.getElementById("clock-pane" + clockNumber);
   clock.classList.add("active");
+  // clock.style.display = "block";
 };
 
 

@@ -1,11 +1,23 @@
 html {
   height: 215%;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 body {
   background: transparent;
+  color: #ffffff;
+}
+
+/* a:link {
+  color: #ffffff;
+} */
+
+a:visited {
+  color: #ffffff;
+}
+
+a:active {
   color: #ffffff;
 }
 
@@ -124,7 +136,8 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
-    margin-bottom: 75px;
+    margin-bottom: 50px;
+    margin-top: 45px;
     font-size: 100px;
   }
 }
