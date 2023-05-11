@@ -20,8 +20,21 @@ body {
                0 0 150px #2980B9;
 }
 
+.panel {
+  background: transparent;
+  color: #9f3454;
+}
+
 .clock {
     overflow: hidden;
+}
+
+.clock-pane {
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 .col-md-12 {
@@ -29,6 +42,7 @@ body {
     padding-bottom: 20px;
 }
 
+/* time-box 在三个时钟同时显示时修改大小。目前未完善 */
 .time-box {
   width: 200px; /*设置时间框的宽度*/
   height: 50px; /*设置时间框的高度*/
