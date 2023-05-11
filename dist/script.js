@@ -21,8 +21,8 @@ function showClock(clockNumber) {
   //   clocks[i].classList.remove("active");
   // };
   document.getElementById('clock-pane1').style.display = 'none';
-  document.getElementById('clock2-pane').style.display = 'none';
-  document.getElementById('clock3-pane').style.display = 'none';
+  document.getElementById('clock-pane2').style.display = 'none';
+  document.getElementById('clock-pane3').style.display = 'none';
 
   // 显示选定的时钟
   var clock = document.getElementById("clock-pane" + clockNumber);
