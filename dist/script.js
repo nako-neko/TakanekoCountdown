@@ -14,7 +14,6 @@ function timeLeft(endtime){
 };
 
 function showClock(clockNumber) {
-
   // 隐藏所有的时钟
   var clocks = document.getElementsByClassName("clock-pane");
   for (var i = 0; i < clocks.length; i++) {
@@ -33,12 +32,18 @@ function showClock(clockNumber) {
 
 $(document).ready(function() {
   var today = new Date();
-  var live = 'June 23 ' + (today.getFullYear() ) + " 19:00:00";
+  var TokyoLive = 'June 23 ' + (today.getFullYear() ) + " 19:00:00";
   var tiktok1 = 'June 24 ' + (today.getFullYear() ) + " 12:45:00";
   var tiktok2 = 'June 24 ' + (today.getFullYear() ) + " 16:45:00";
-  if (today.getMonth() == 5 && today.getDate() == 23 && today.getHours() == 19) {   //还没改！！！
-    deadline = 'January 1 ' + (today.getFullYear()) + " 00:00:00";                  //还没改！！！
-  };                                                                                //还没改！！！
+  if (today.getMonth() == 5 && today.getDate() == 23 && today.getHours() == 19) {
+    TokyoLive = 'June 23 ' + (today.getFullYear() ) + " 00:00:00";
+  };
+  if (today.getMonth() == 5 && today.getDate() == 23 && today.getHours() == 19) {
+    tiktok1 = 'June 24 ' + (today.getFullYear() ) + " 00:00:00";
+  };
+  if (today.getMonth() == 5 && today.getDate() == 23 && today.getHours() == 19) {
+    tiktok2 = 'June 24 ' + (today.getFullYear() ) + " 00:00:00";
+  };
 
   $("#header").hover(function() {
     $(this).toggleClass('bluelight');
@@ -52,7 +57,7 @@ $(document).ready(function() {
     $(this).toggleClass('bluelight');
   });
   
-  var setClock_live = function(newyear){
+  var setClock_TokyoLive = function(newyear){
     var timeinterval = setInterval(function(){
       var t = timeLeft(newyear);
       $('#days1').text(t.days);
@@ -61,8 +66,8 @@ $(document).ready(function() {
       $('#secs1').text(('0' + t.seconds).slice(-2));
       if(t.total<=0){
         clearInterval(timeinterval);
-        var now = new Date();
-        var yearStr = now.getFullYear().toString();
+        // var now = new Date();
+        // var yearStr = now.getFullYear().toString();
         var str = "LIVE"
         $('#header1').text("Tokyo Live!!!");
         $('#days1').text(str[0]);
@@ -87,8 +92,8 @@ $(document).ready(function() {
       $('#secs2').text(('0' + t.seconds).slice(-2));
       if(t.total<=0){
         clearInterval(timeinterval);
-        var now = new Date();
-        var yearStr = now.getFullYear().toString();
+        // var now = new Date();
+        // var yearStr = now.getFullYear().toString();
         var str = "LOVE"
         $('#header2').text("TIkTok1!!!");
         $('#days2').text(str[0]);
@@ -113,8 +118,8 @@ $(document).ready(function() {
       $('#secs3').text(('0' + t.seconds).slice(-2));
       if(t.total<=0){
         clearInterval(timeinterval);
-        var now = new Date();
-        var yearStr = now.getFullYear().toString();
+        // var now = new Date();
+        // var yearStr = now.getFullYear().toString();
         var str1 = "LOVE"
         $('#header3').text("TikTok2!!!");
         $('#days3').text(str1[0]);
@@ -130,7 +135,7 @@ $(document).ready(function() {
     },1000);
   };
   
-  setClock_live(live);
+  setClock_TokyoLive(TokyoLive);
   setClock_tt1(tiktok1);
   setClock_tt2(tiktok2);
   

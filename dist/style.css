@@ -9,9 +9,9 @@ body {
   color: #ffffff;
 }
 
-/* a:link {
+a:link {
   color: #ffffff;
-} */
+}
 
 a:visited {
   color: #ffffff;
@@ -34,7 +34,7 @@ a:active {
 
 .panel {
   background: transparent;
-  color: #9f3454;
+  color: #eb68bb;
 }
 
 .clock {
@@ -131,13 +131,13 @@ a:active {
 }
 
 h1 {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 @media (min-width: 768px) {
   h1 {
-    margin-bottom: 50px;
-    margin-top: 45px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     font-size: 100px;
   }
 }
